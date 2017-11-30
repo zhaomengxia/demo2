@@ -57,22 +57,6 @@ dependencies {
 buildscript {
 
     Properties localProperties = new Properties()
-    ext {
-        springVersion = "4.2.6.RELEASE"
-        springBootVersion = "1.5.2.RELEASE"
-        //spring 镜像repo
-        springRepo = "http://maven.springframework.org/release/org/springframework/"
-        //阿里云maven镜像
-        aliyunRepo = "http://maven.aliyun.com/nexus/content/groups/public/"
-        //nexus repo
-    }
-
-    repositories {
-        mavenLocal()
-        maven { url "${aliyunRepo}" }
-        mavenCentral()
-        maven { url "${springRepo}" }
-    }
 
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
