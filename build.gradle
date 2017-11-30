@@ -48,11 +48,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-redis:${springRedisVersion}")
     compile("org.springframework.data:spring-data-redis:${springDataRedis}")
 
-    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    classpath 'com.bmuschko:gradle-docker-plugin:2.6.7'
-    classpath("io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE")
-    classpath("org.springframework:springloaded:1.2.5.RELEASE")
-
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
