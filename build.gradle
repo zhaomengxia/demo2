@@ -57,10 +57,11 @@ dependencies {
  */
 buildscript {
 
+    /**/
     Properties localProperties = new Properties()
 
+    /*定义常量*/
     ext {
-        springVersion = "4.2.6.RELEASE"
         springBootVersion = "1.5.2.RELEASE"
 
         //spring镜像repo
@@ -69,6 +70,7 @@ buildscript {
         aliyunRepo = "http://maven.aliyun.com/nexus/content/groups/public/"
     }
 
+    /*“仓库”*/
     repositories {
 
         //使用maven的本地库
@@ -82,9 +84,10 @@ buildscript {
         mavenCentral()
     }
 
+    /*依赖的包*/
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath 'com.bmuschko:gradle-docker-plugin:2.6.7'
+        classpath 'com.bmuschko:gradle-docker-plugin:2.6.7.RELEASE'
         classpath("io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE")
         classpath("org.springframework:springloaded:1.2.5.RELEASE")
     }
