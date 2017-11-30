@@ -58,7 +58,7 @@ dependencies {
 buildscript {
 
     /**/
-    Properties localProperties = new Properties()
+    /*Properties localProperties = new Properties()*/
 
     /*定义常量*/
     ext {
