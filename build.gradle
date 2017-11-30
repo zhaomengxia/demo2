@@ -21,7 +21,7 @@ ext {
 
     /**/
     gradleDockerVersion = "2.6.7.RELEASE"
-    dependencyManagementVersion = "0.6.1.RELEASE"
+    /*dependencyManagementVersion = "0.6.1.RELEASE"*/
     springloadedVersion = "1.2.5.RELEASE"
     
     //spring镜像repo
@@ -57,7 +57,7 @@ dependencies {
     /**/
     compile("org.springframework.boot:spring-boot-gradle:${springBootVersion}")
     compile("com.bmuschko:gradle-docker:${gradleDockerVersion}")
-    compile("io.spring.gradle:dependency-management:${dependencyManagementVersion}")
+    /*compile("io.spring.gradle:dependency-management:${dependencyManagementVersion}")*/
     compile("org.springframework:springloaded:${springloadedVersion}")
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
