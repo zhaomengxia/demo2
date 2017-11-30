@@ -1,0 +1,13 @@
+server:
+  port: 8088
+
+jedis:
+  pool:
+    host: 192.168.2.175
+    port: 6379
+    password: malisha
+    timeout: 0
+    config:
+       maxTotal: 100
+       maxIdle: 10
+       maxWaitMillis: 100000
