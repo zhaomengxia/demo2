@@ -55,9 +55,9 @@ dependencies {
     compile("org.springframework.data:spring-data-redis:${springDataRedis}")
 
     /**/
-    compile("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    compile("com.bmuschko:gradle-docker-plugin:${gradleDockerVersion}")
-    compile("io.spring.gradle:dependency-management-plugin:${dependencyManagementVersion}")
+    compile("org.springframework.boot:spring-boot-gradle:${springBootVersion}")
+    compile("com.bmuschko:gradle-docker:${gradleDockerVersion}")
+    compile("io.spring.gradle:dependency-management:${dependencyManagementVersion}")
     compile("org.springframework:springloaded:${springloadedVersion}")
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
