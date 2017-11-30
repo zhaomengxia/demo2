@@ -4,10 +4,10 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 
 /**/
-/*apply plugin: "idea"
+apply plugin: "idea"
 apply plugin: "maven"
 apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'*/
+apply plugin: 'io.spring.dependency-management'
 
 sourceCompatibility = 1.8
 
@@ -18,11 +18,6 @@ ext {
 
     springRedisVersion = "1.3.5.RELEASE"
     springDataRedis = "1.7.2.RELEASE"
-
-    /**/
-    gradleDockerVersion = "2.6.7.RELEASE"
-    /*dependencyManagementVersion = "0.6.1.RELEASE"*/
-    springloadedVersion = "1.2.5.RELEASE"
     
     //spring镜像repo
     springRepo = "http://maven.springframework.org/release/org/springframework/"
@@ -54,36 +49,37 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-redis:${springRedisVersion}")
     compile("org.springframework.data:spring-data-redis:${springDataRedis}")
 
-    /**/
-    compile("org.springframework.boot:spring-boot-gradle:${springBootVersion}")
-    compile("com.bmuschko:gradle-docker:${gradleDockerVersion}")
-    /*compile("io.spring.gradle:dependency-management:${dependencyManagementVersion}")*/
-    compile("org.springframework:springloaded:${springloadedVersion}")
-
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 /**
- * 编译脚本
+ * 编译脚本：gradle脚本自身所需要的资源；不同于外部的是项目自身所需要的资源
  */
-/*buildscript {
+buildscript {
 
     Properties localProperties = new Properties()
+
     ext {
         springVersion = "4.2.6.RELEASE"
         springBootVersion = "1.5.2.RELEASE"
-        //spring 镜像repo
+
+        //spring镜像repo
         springRepo = "http://maven.springframework.org/release/org/springframework/"
-        //阿里云maven镜像
+        //阿里云maven镜像repo
         aliyunRepo = "http://maven.aliyun.com/nexus/content/groups/public/"
-        //nexus repo
     }
 
     repositories {
+
+        //使用maven的本地库
         mavenLocal()
-        maven { url "${aliyunRepo}" }
-        mavenCentral()
+
+        /*使用在线的镜像库*/
         maven { url "${springRepo}" }
+        maven { url "${aliyunRepo}" }
+
+        //使用maven的中心仓库
+        mavenCentral()
     }
 
     dependencies {
@@ -92,4 +88,4 @@ dependencies {
         classpath("io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE")
         classpath("org.springframework:springloaded:1.2.5.RELEASE")
     }
-}*/
+}
