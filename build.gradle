@@ -4,10 +4,10 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 
 /**/
-apply plugin: "idea"
-apply plugin: "maven"
+/*apply plugin: "idea"
+*//*apply plugin: "maven"*//*
 apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
+apply plugin: 'io.spring.dependency-management'*/
 
 sourceCompatibility = 1.8
 
@@ -57,9 +57,6 @@ dependencies {
  */
 buildscript {
 
-    /**/
-    /*Properties localProperties = new Properties()*/
-
     /*定义常量*/
     ext {
         springBootVersion = "1.5.2.RELEASE"
@@ -86,9 +83,9 @@ buildscript {
 
     /*依赖的包*/
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        /*classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         classpath 'com.bmuschko:gradle-docker-plugin:2.6.7'
         classpath("io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE")
-        classpath("org.springframework:springloaded:1.2.5.RELEASE")
+        classpath("org.springframework:springloaded:1.2.5.RELEASE")*/
     }
 }
