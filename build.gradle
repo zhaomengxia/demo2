@@ -3,8 +3,8 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-/**/
-/*apply plugin: 'org.springframework.boot'*/
+/*打包需要的插件plugin*/
+apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = 1.8
 
@@ -47,12 +47,13 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
+/*打包需要的脚本*/
 /**
  * 编译脚本：gradle脚本自身所需要的资源；不同于外部的是项目自身所需要的资源
  */
-/*buildscript {
+buildscript {
 
-    *//*定义常量*//*
+    /*定义常量*/
     ext {
         springBootVersion = "1.5.2.RELEASE"
 
@@ -62,13 +63,13 @@ dependencies {
         aliyunRepo = "http://maven.aliyun.com/nexus/content/groups/public/"
     }
 
-    *//*“仓库”*//*
+    /*“仓库”*/
     repositories {
 
         //使用maven的本地库
         mavenLocal()
 
-        *//*使用在线的镜像库*//*
+        /*使用在线的镜像库*/
         maven { url "${springRepo}" }
         maven { url "${aliyunRepo}" }
 
@@ -76,11 +77,10 @@ dependencies {
         mavenCentral()
     }
 
-    *//*依赖的包*//*
+    /*依赖的包*/
     dependencies {
-        *//*类路径*//*
+        /*类路径*/
 
-        *//**//*
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
-}*/
+}
