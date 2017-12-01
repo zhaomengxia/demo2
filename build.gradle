@@ -5,7 +5,6 @@ apply plugin: 'java'
 
 /**/
 apply plugin: 'org.springframework.boot'
-/*apply plugin: 'io.spring.dependency-management'*/
 
 sourceCompatibility = 1.8
 
@@ -83,7 +82,7 @@ buildscript {
 
         /**/
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath("com.bmuschko:gradle-docker-plugin:2.6.7")
+        /*classpath("com.bmuschko:gradle-docker-plugin:2.6.7")*/
         classpath("io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE")
         classpath("org.springframework:springloaded:1.2.5.RELEASE")
     }
