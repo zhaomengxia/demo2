@@ -22,6 +22,12 @@ public class Demo2Controller {
     /**
      * 对key的操作
      */
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String sayHello()
+    {
+        return "nihao";
+    }
+
 
     //配置url映射
     //url：http://localhost:8088/springboot/type/key的值
